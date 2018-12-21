@@ -47,6 +47,30 @@ public class Student {
         return "Error";
     }
 
+    // Equals:
+    public boolean equals(Object o) {
+
+        if (o == this) {
+            return true;
+        }
+
+        if (o == null) {
+            return false;
+        }
+
+        if (o.getClass() != getClass()) {
+            return false;
+        }
+
+        Student theStudent = (Student) o;
+        return theStudent.getStudentId() == getStudentId();
+    }
+
+    // ToString:
+    public String toString() {
+        return "Student Name: " + name + " (" + studentId + ") " + "Course Credits: " + courseCredits + " GPA: " + gpa;
+    }
+
     // Getters & Setters:
     public String getName() {
         return name;

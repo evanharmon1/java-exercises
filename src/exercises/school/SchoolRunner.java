@@ -4,7 +4,7 @@ public class SchoolRunner {
 
     public static void main(String[] args){
         Student evan = new Student("Evan Harmon", 1234, 15, 2);
-        Student trevor = new Student("Trevor", 1234111, 2, 1);
+        Student cayden = new Student("Cayden", 1234111, 2, 1);
         System.out.println(evan.getName());
         System.out.println(evan.getStudentId());
         System.out.println(evan.getCourseCredits());
@@ -23,7 +23,13 @@ public class SchoolRunner {
         System.out.println(math.getCourseName());
         System.out.println(math.getCredits());
         math.addStudent(evan);
-        math.addStudent(trevor);
+        math.addStudent(cayden);
         math.getStudents();
+        Course science = new Course("Science 101", 5);
+
+        System.out.println(evan);
+        System.out.println(evan.equals(evan));
+        System.out.println(math);
+        System.out.println(math.equals(science));
     }
 }
