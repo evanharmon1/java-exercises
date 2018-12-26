@@ -64,7 +64,7 @@ public class MenuItem {
         this.updated = updated;
     }
 
-    public Boolean getNew() {
+    public Boolean isNew() {
         return isNew;
     }
 
@@ -72,11 +72,8 @@ public class MenuItem {
         isNew = aNew;
     }
 
-    public static void main(String[] args) {
-
-        MenuItem cake = new MenuItem(2, "Good", "Dessert");
-        System.out.println(cake.getPrice());
-        MenuItem salad = new MenuItem(2, "Good", "side");
+    @Override
+    public String toString() {
+        return description + " $" + price;
     }
-
 }

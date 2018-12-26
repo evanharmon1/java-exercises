@@ -6,7 +6,7 @@ package exercises;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class PrintEven {
+public class PrintFive {
     private static ArrayList<String> list = new ArrayList<>(Arrays.asList("jungle", "forest", "glitter bomb", "biome", "taiga"));
 
     public static void main(String[] args) {

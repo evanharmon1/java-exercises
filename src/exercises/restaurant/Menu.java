@@ -8,28 +8,21 @@ import java.util.Date;
 
 public class Menu {
 
-    public ArrayList<MenuItem> items = new ArrayList<>();
     public Date lastUpdated;
+    public ArrayList<MenuItem> items = new ArrayList<>();
 
-    public Menu(ArrayList<MenuItem> items, Date lastUpdated) {
-        this.items = items;
-        this.lastUpdated = lastUpdated;
+    public Menu(String name) {
+        name = name;
+        lastUpdated = new Date();
     }
 
-    public ArrayList<MenuItem> getItems() {
-        return items;
-    }
-
-    public void setItems(ArrayList<MenuItem> items) {
-        this.items = items;
+    public void addItem(MenuItem item) {
+        this.items.add(item);
+        this.lastUpdated = new Date();
     }
 
     public Date getLastUpdated() {
         return lastUpdated;
-    }
-
-    public void setLastUpdated(Date lastUpdated) {
-        this.lastUpdated = lastUpdated;
     }
 }
 

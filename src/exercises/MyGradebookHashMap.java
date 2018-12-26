@@ -18,26 +18,24 @@ public class MyGradebookHashMap {
 
         HashMap<Integer, String> students = new HashMap<>();
         Scanner in = new Scanner(System.in);
-        Integer studentId;
+        Integer studentId = 1;
+        String name;
 
         System.out.println("Enter your students (or 0 to finish):");
 
         // Get student names and grades
-        do {
+        while (studentId != 0) {
 
             System.out.println("Student ID: ");
             studentId = in.nextInt();
 
             if (studentId != 0) {
-                System.out.print("Name: ");
-                String name = in.nextLine();
+                System.out.println("Name: ");
+                name = in.next();
                 students.put(studentId, name);
-
-                // Read in the newline before looping back
-                in.nextLine();
             }
 
-        } while(studentId != 0);
+        }
 
         // Print class roster
         System.out.println("\nClass roster:");
